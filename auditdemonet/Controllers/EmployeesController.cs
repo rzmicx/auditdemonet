@@ -64,8 +64,8 @@ namespace auditdemonet.Controllers
             var emp = _context.Employees.FirstOrDefault(x => x.Id == id);
             if (emp == null) return NotFound();
 
-            emp.Name = "testdata";
-            emp.DepartmentId = 2;
+            emp.Name = "test 4";
+            emp.DepartmentId =1;
 
             _context.SaveChanges(); // 🔥 AUTO AUDIT
 

@@ -36,6 +36,10 @@ Audit.EntityFramework.Configuration.Setup()
     .ForContext<AuditDemoDbContext>(cfg => cfg
         .IncludeEntityObjects());
 
+Audit.Core.Configuration.Setup()
+    .UseCustomProvider(new AuditChangeDataProvider());
+
+
 var app = builder.Build();
 
 
